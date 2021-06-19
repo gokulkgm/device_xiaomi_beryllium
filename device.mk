@@ -18,12 +18,6 @@ TARGET_SCREEN_WIDTH := 1080
 PRODUCT_PACKAGES += \
     XiaomiParts
 
-# FM
-PRODUCT_PACKAGES += \
-    FM2 \
-    libqcomfm_jni \
-    qcom.fmradio
-
 # Screen density
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
@@ -47,6 +41,10 @@ PRODUCT_COPY_FILES += \
 # Device fstab
 PRODUCT_PACKAGES += \
     fstab.qcom
+
+# FM
+BOARD_HAS_QCA_FM_SOC := "cherokee"
+BOARD_HAVE_QCOM_FM := true
 
 # Device init scripts
 PRODUCT_PACKAGES += \
